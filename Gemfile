@@ -47,8 +47,14 @@ gem 'rails_12factor', group: :production
 # Use bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3.5.1'
 
+# Use simple_form
+gem 'simple_form'
+
 # Use sprockets
 gem 'sprockets', '2.11.0'
 
 # Use sass-rails
 gem 'sass-rails'
+
+# Use Kaminari paginator
+gem 'kaminari'
