@@ -58,3 +58,6 @@ gem 'sass-rails'
 
 # Use Kaminari paginator
 gem 'kaminari'
+
+# Use devise for user authentication
+gem 'devise', '>= 3.2.4'
