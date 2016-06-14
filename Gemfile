@@ -70,3 +70,5 @@ gem 'figaro', ">= 1.0.0"
 
 # Use carrierwave
 gem 'carrierwave'
+
+gem 'fog'

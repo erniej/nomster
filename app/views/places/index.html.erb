@@ -5,9 +5,7 @@
 <% @places.each do |place| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">
     <% if place.photos.present? %>
-      <div class="col-xs-12 col-sm-12">
        <%= image_tag(place.photos.last.picture, :class => "img-responsive")%>
-      </div>
     <% end %>
     
     <h1><%= link_to place.name, place_path(place) %></h1>
@@ -15,7 +13,7 @@
     <p><%= place.description %></p><br />
 
     <% if place.user.present? %>
-      <small><%= place.user.email %></small>
+      <!-- <small><%= place.user.email %></small> -->
     <% end %>
 
     <% if place.comments.present? %>

@@ -128,10 +128,7 @@
 <br />
 <% @place.photos.each do |photo| %>
   <div class="pic-box col-xs-12 col-sm-6">
-    <!-- <blockquote> -->
       <%= image_tag photo.picture, :class => "img-responsive" %>
       <%= photo.caption %>
-      <!-- <small><%= photo.user.email %></small> -->
-    <!-- </blockquote> -->
   </div>
 <% end %>
