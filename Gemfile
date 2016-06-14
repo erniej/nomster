@@ -67,3 +67,6 @@ gem 'geocoder', "1.3.4"
 
 # Use Figaro
 gem 'figaro', ">= 1.0.0"
+
+# Use carrierwave
+gem 'carrierwave'

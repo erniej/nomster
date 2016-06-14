@@ -8,6 +8,13 @@
   margin-top: 10px;
   margin-bottom: 15px;
   padding: 20px;
+  overflow: hidden;
+}
+
+.pic-box {
+  background: #f9f9f9;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -64,4 +71,8 @@ blockquote:before {
 }
 blockquote p {
   display: inline;
+}
+
+.image-responsive {
+
 }

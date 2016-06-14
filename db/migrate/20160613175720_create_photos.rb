@@ -1,6 +1,6 @@
 class CreatePhotos < ActiveRecord::Migration
   def change
-    create_table :photos do |t|
+    create_table :photos, force: true do |t|
       t.text :caption
       
       t.integer :user_id
