@@ -33,7 +33,14 @@
 <br />
 <!-- map -->
 
-  <div class="pull-right">
+<!-- Buttons -->
+    <div class="pull-right">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Add a comment
+    </button>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#photoModal">
+      Add a photo
+    </button>
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
       <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger'%> 
@@ -92,16 +99,17 @@
   </div>
 </div>
 
-<div class="booyah-box col-xs-10 col-xs-offset-1">
-  <h1 class="pull-left">Comments</h1>
+<!-- <div class="booyah-box col-xs-10 col-xs-offset-1">
+  <h1 class="pull-left">Comments</h1> -->
   <!-- Button trigger comment modal -->
-  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
+<!--   <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#myModal">
     Add a comment
   </button>
-</div>
+</div> -->
 
 <div class="clear"></div>
 
+<!-- Puts comments on the page -->
 <% @place.comments.each do |comment| %>
   <div class="col-xs-12 col-sm-6">
     <blockquote>
@@ -116,14 +124,15 @@
 
 <div class="clear"></div>
 
-<div class="booyah-box col-xs-10 col-xs-offset-1">
-  <h1 class="pull-left">Photos</h1>
+<!-- <div class="booyah-box col-xs-10 col-xs-offset-1">
+  <h1 class="pull-left">Photos</h1> -->
   <!-- Button trigger modal -->
-  <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#photoModal">
+<!--   <button class="btn btn-primary btn-lg pull-right" data-toggle="modal" data-target="#photoModal">
     Add a photo
   </button>
-</div>
+</div> -->
 
+<!-- Puts photos on the page -->
 <div class="clear"></div>
 <br />
 <% @place.photos.each do |photo| %>
