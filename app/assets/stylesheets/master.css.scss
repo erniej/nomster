@@ -11,12 +11,6 @@
   overflow: hidden;
 }
 
-.pic-box {
-  background: #f9f9f9;
-  margin: 1.5em 10px;
-  padding: 0;
-}
-
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -74,5 +68,7 @@ blockquote p {
 }
 
 .image-responsive {
-
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

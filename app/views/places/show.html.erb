@@ -1,4 +1,5 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1">
+
   <h1><%= @place.name %></h1>
   <i><%= @place.address %></i>
   <br/><br/>
@@ -29,8 +30,8 @@
 
     <div id="map"></div>
 <% end %>
-
 <br />
+
 <!-- map -->
 
 <!-- Buttons -->
@@ -49,7 +50,7 @@
 </div>
 
 <div class="clear"></div>
-
+<br />
 <!-- Modal comments -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
@@ -110,20 +111,26 @@
 <div class="clear"></div>
 
 <!-- Puts comments on the page -->
-<% @place.comments.each do |comment| %>
-  <div class="col-xs-12 col-sm-6">
-    <blockquote>
-      <% if comment.humanized_rating.present? %>
-        <b><%= comment.humanized_rating %></b> -
-      <% end %>
-      <%= comment.message %>
-      <!-- <small><%= comment.user.email %></small>   -->
-    </blockquote>    
-  </div>
-<% end %>
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+  <h1 class="pull-left">Comments</h1>
+  <div class="clear"></div>
+  <br />
+  <% @place.comments.each do |comment| %>
+    <div class="col-xs-12 col-sm-6">
+      <blockquote>
+        <% if comment.humanized_rating.present? %>
+          <b><%= comment.humanized_rating %></b> -
+        <% end %>
+        <%= comment.message %>
+        <!-- <small><%= comment.user.email %></small>   -->
+      </blockquote>    
+    </div>
+  <% end %>
+</div>
+
 
 <div class="clear"></div>
-
+<br />
 <!-- <div class="booyah-box col-xs-10 col-xs-offset-1">
   <h1 class="pull-left">Photos</h1> -->
   <!-- Button trigger modal -->
@@ -133,11 +140,14 @@
 </div> -->
 
 <!-- Puts photos on the page -->
-<div class="clear"></div>
-<br />
-<% @place.photos.each do |photo| %>
-  <div class="pic-box col-xs-12 col-sm-6">
-      <%= image_tag photo.picture, :class => "img-responsive" %>
-      <%= photo.caption %>
-  </div>
-<% end %>
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+  <h1 class="pull-left">Photos</h1>
+  <div class="clear"></div>
+  <br />
+  <% @place.photos.each do |photo| %>
+    <div class="col-xs-12 col-sm-6">
+        <%= image_tag photo.picture, :class => "img-responsive" %>
+        <%= photo.caption %>
+    </div>
+  <% end %>
+</div>
