@@ -15,19 +15,19 @@
   <div class="carousel-inner">
     <div class="item active">
       <%= image_tag 'slider1.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <div class="carousel-caption img-responsive">
         Find the best restaurants in town
       </div>
     </div>
     <div class="item">
       <%= image_tag 'slider2.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <div class="carousel-caption img-responsive">
         Looking for a place to meet friends?
       </div>
     </div>
     <div class="item">
       <%= image_tag 'slider3.jpg', class: 'img-responsive' %>
-      <div class="carousel-caption">
+      <div class="carousel-caption img-responsive">
         Find places to eat while traveling?
       </div>
     </div>
@@ -66,7 +66,6 @@
             <b><%= place.comments.last.humanized_rating %></b> -
           <% end %>
           <%= place.comments.last.message %>
-          <!-- <small><%= place.comments.last.user.email %></small> -->
         </blockquote>
       </div>
     <% end %>    
