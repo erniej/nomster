@@ -37,13 +37,14 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
-<br />
 <!-- End carousel -->
 
-<div class="paginate col-xs-6 col-xs-offset-1">
-  <%= paginate @places %>
+<br style="clear:both;" />
+<div class="text-center">
+  <div class="pagination">
+    <%= paginate @places %>
+  </div>
 </div>
-<div class="clear"></div>
 
 <% @places.each do |place| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">
@@ -71,8 +72,10 @@
     <% end %>    
   </div>
 <% end %>
-<div class="clear"></div>
 
-<div class="paginate col-xs-6 col-xs-offset-1">
-  <%= paginate @places %>
+<br style="clear:both;" />
+<div class="text-center">
+  <div class="pagination">
+    <%= paginate @places %>
+  </div>
 </div>

@@ -59,6 +59,8 @@ gem 'sass-rails'
 # Use Kaminari paginator
 gem 'kaminari'
 
+gem 'kaminari-bootstrap', '~> 3.0.1'
+
 # Use devise for user authentication
 gem 'devise', '>= 3.2.4'
 
