@@ -1,8 +1,3 @@
-<div class="paginate col-xs-6 col-xs-offset-1">
-  <%= paginate @places %>
-</div>
-<div class="clear"></div>
-
 <!-- carousel -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -33,7 +28,7 @@
       </div>
     </div>
   </div>
-
+<div class="clear"></div>
   <!-- Controls -->
   <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left"></span>
@@ -42,9 +37,13 @@
     <span class="glyphicon glyphicon-chevron-right"></span>
   </a>
 </div>
+<br />
 <!-- End carousel -->
-<br />
-<br />
+
+<div class="paginate col-xs-6 col-xs-offset-1">
+  <%= paginate @places %>
+</div>
+<div class="clear"></div>
 
 <% @places.each do |place| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">
@@ -72,3 +71,8 @@
     <% end %>    
   </div>
 <% end %>
+<div class="clear"></div>
+
+<div class="paginate col-xs-6 col-xs-offset-1">
+  <%= paginate @places %>
+</div>
