@@ -5,7 +5,8 @@ class PlacesController < ApplicationController
     # @places = Place.order("name").page(params[:page]).per(5)
     @recipes = Place.all
     if params[:search]
-      @places = Place.search(params[:search]).order("created_at DESC")
+      #  @places = Place.search(params[:search]).order("created_at DESC")
+      @places = Place.search(params[:search]).order("name").page(params[:page]).per(5)
     else
       @places = Place.order("name").page(params[:page]).per(5)
       # @places = Place.all.order("created_at DESC")

@@ -46,6 +46,11 @@
   </div>
 </div>
 
+<!-- No simple search match -->
+<% if @places.blank? %>
+  <h4>There are no places containing the term <%= params[:search] %>.</h4>
+<% end %>
+
 <!-- Places last photo on places page -->
 <% @places.each do |place| %>
   <div class="booyah-box col-xs-10 col-xs-offset-1">

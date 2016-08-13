@@ -70,10 +70,5 @@
 
   <%= yield %>
 
-  <!-- No match -->
-  <% if @places.blank? %>
-    <h4>There are no places containing the term <%= params[:search] %>.</h4>
-  <% end %>
-
   </body>
 </html>
