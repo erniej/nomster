@@ -9,10 +9,6 @@ class Place < ActiveRecord::Base
   validates :description, presence: true
 
   def self.search(search)
-    if search
-      find(:all, conditions: ['name ILIKE ? OR description ILIKE ? OR address ILIKE', "%#{search}%", "%#{search}%", "%#{search}%"])
-    else
-      find(:all)
-    end
+    where("name ILIKE ? OR description ILIKE ? OR address ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
   end
 end
