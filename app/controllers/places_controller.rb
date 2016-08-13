@@ -2,8 +2,15 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @places = Place.order("name").page(params[:page]).per(5)
+    # @places = Place.order("name").page(params[:page]).per(5)
+    @places = Place.search(params[:search])
   end
+    # if params[:search]
+    #   @places = Place.search(params[:search]).order("created_at DESC")
+    # else
+    #   @places = Place.all.order("created_at DESC")
+    # end
+  # end
 
   def new
     @place = Place.new
@@ -33,7 +40,7 @@ class PlacesController < ApplicationController
 
   def update
     @place = Place.find(params[:id])
-    
+
     if @place.user != current_user
      return render text: 'Not Allowed', status: :forbidden
     end

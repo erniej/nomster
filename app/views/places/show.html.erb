@@ -44,7 +44,7 @@
     </button>
     <% if current_user && current_user == @place.user %>
       <%= link_to 'Edit', edit_place_path(@place), class: 'btn btn-primary' %>
-      <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger'%> 
+      <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'}, class: 'btn btn-danger'%>
     <% end %>
   </div>
 </div>
@@ -83,7 +83,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Add a photo</h4>
-      </div>      
+      </div>
       <div class="clear"></div>
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
         <div class="modal-body">
@@ -113,7 +113,7 @@
         <% end %>
         <%= comment.message %>
         <!-- <small><%= comment.user.email %></small>   -->
-      </blockquote>    
+      </blockquote>
     </div>
   <% end %>
 </div>
