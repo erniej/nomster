@@ -44,6 +44,7 @@
           <% end %>
         </ul>
 
+<<<<<<< Updated upstream
         <!-- Simple Search -->
         <%= form_tag(places_path, method: "get", id: "search-form") do %>
             <%= text_field_tag :search, params[:search], placeholder: "Search Places" %>
@@ -57,6 +58,19 @@
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form> -->
+=======
+
+        <!-- Simple search form -->
+        <form class="navbar-form navbar-right" role="search">
+          <div class="form-group">
+            <%= form_tag(places_path, method: "get", id: "search-form") do %>
+              <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search places" %>
+              <%= submit_tag "Go!", name: nil, class: "btn btn-xs btn-success" %>
+            <% end %>
+          </div>
+        </form>
+
+>>>>>>> Stashed changes
 
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

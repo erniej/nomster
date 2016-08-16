@@ -46,10 +46,12 @@
   </div>
 </div>
 
-<!-- No simple search match -->
+
+<!-- Simple search no matches alert -->
 <% if @places.blank? %>
   <h4>There are no places containing the term <%= params[:search] %>.</h4>
 <% end %>
+
 
 <!-- Places last photo on places page -->
 <% @places.each do |place| %>

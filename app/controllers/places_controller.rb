@@ -8,8 +8,8 @@ class PlacesController < ApplicationController
       #  @places = Place.search(params[:search]).order("created_at DESC")
       @places = Place.search(params[:search]).order("name").page(params[:page]).per(5)
     else
-      @places = Place.order("name").page(params[:page]).per(5)
       # @places = Place.all.order("created_at DESC")
+      @places = Place.order("name").page(params[:page]).per(5)
     end
   end
 
