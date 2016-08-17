@@ -47,11 +47,15 @@
 
         <!-- Simple search form -->
         <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <%= form_tag(places_path, method: "get", id: "search-form") do %>
-              <%= text_field_tag :search, params[:search], class: "form-control", placeholder: "Search places" %>
-              <%= submit_tag "Go!", name: nil, class: "btn btn-xs btn-success" %>
-            <% end %>
+          <div id="custom-search-input">
+            <div class="form-group">
+              <%= form_tag(places_path, method: "get", id: "search-form") do %>
+                <%= text_field_tag :search, params[:search], class: "form-control box-height", placeholder: "Search places" %>
+                <%= button_tag(class: "btn btn-info btn-lg", type: "submit") do %>
+                  <i class="glyphicon glyphicon-search"></i>
+                <% end %>
+              <% end %>
+            </div>
           </div>
         </form>
 
