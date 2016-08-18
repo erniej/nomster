@@ -49,7 +49,9 @@
 
 <!-- Simple search no matches alert -->
 <% if @places.blank? %>
-  <h4>There are no places containing the term <%= params[:search] %>.</h4>
+  <div class="text-center">
+    <h4>There are no places containing the term <%= params[:search] %>.</h4>
+  </div>
 <% end %>
 
 
