@@ -2,26 +2,12 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    # @places = Place.order("name").page(params[:page]).per(5)
     if params[:search]
-      #  @places = Place.search(params[:search]).order("created_at DESC")
       @places = Place.search(params[:search]).order("name").page(params[:page]).per(5)
     else
-      # @places = Place.all.order("created_at DESC")
       @places = Place.order("name").page(params[:page]).per(5)
     end
   end
-
-
-  # def index
-  #   @recipes = Recipe.all
-  #   if params[:search]
-  #     @recipes = Recipe.search(params[:search]).order("created_at DESC")
-  #   else
-  #     @recipes = Recipe.all.order("created_at DESC")
-  #   end
-  # end
-
 
   def new
     @place = Place.new
