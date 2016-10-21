@@ -16,4 +16,10 @@ Check out the live Nomster application [here](https://nomster-ernie-jamison.hero
 
 * Incorporates a simple search feature.
 
+* Kaminari utilized for pagination.
+
+* CSS styling is done with Twitter Bootstrap.
+
+* Postgresql is used for the database.
+
 ![alt tag](app/assets/images/nomster.png)
