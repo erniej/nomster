@@ -2,7 +2,7 @@
 
 A Yelp style restaurant review application
 
-Check out the live Flixter application [here](https://nomster-ernie-jamison.herokuapp.com) and add a favorite restaurant of yours.
+Check out the live Nomster application [here](https://nomster-ernie-jamison.herokuapp.com) and add a favorite restaurant of yours.
 
 ### Features:
 
